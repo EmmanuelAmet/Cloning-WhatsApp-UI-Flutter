@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './more.dart';
+import './chat.dart';
 
 void main(){
   runApp(MyApp());
@@ -42,7 +44,7 @@ class _homeState extends State<home> {
             IconButton(
               icon: Icon(Icons.more_vert),
               onPressed: (){
-
+                Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context)=>more()));
               },
             )
           ],
@@ -96,6 +98,9 @@ class _homeState extends State<home> {
                       )
                     ],
                   ),
+                  onTap: (){
+                    Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context)=>MyChat()));
+                  },
                 ),
                 Divider(),
 
